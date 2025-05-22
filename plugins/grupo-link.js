@@ -7,6 +7,5 @@ handler.help = ['linkgroup'];
 handler.tags = ['group'];
 handler.command = /^link(gro?up)?$/i;
 handler.group = true;
-handler.botAdmin = true;
 handler.register = true 
 export default handler;

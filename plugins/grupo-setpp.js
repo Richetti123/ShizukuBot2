@@ -9,5 +9,4 @@ await conn.updateProfilePicture(m.chat, img).then(_ => m.reply(`${lenguajeGB['sm
 handler.command = /^setpp(group|grup|gc)?$/i
 handler.group = true
 handler.admin = true
-handler.botAdmin = true
 export default handler

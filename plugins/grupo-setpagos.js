@@ -30,7 +30,6 @@ let handler = async (m, { conn, text, command }) => {
 }
 
 handler.command = /^set(pagos|stock|reglas)$/i
-handler.botAdmin = true
 handler.admin = true
 handler.group = true
 

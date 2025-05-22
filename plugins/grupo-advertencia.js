@@ -43,5 +43,4 @@ handler.tags = ['owner']
 handler.command = /^(advertir|advertencia|Advertencias|warn|warning)$/i
 handler.group = true
 handler.admin = true
-handler.botAdmin = true
 export default handler

@@ -139,7 +139,6 @@ console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗
 console.log(e)
 }}
 handler.command = /^(grouptime|gctime|grupotiempo)$/i
-handler.botAdmin = true
 handler.group = true 
 handler.admin = true
 

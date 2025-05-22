@@ -25,5 +25,4 @@ conn.reply(m.chat, lenguajeGB['smsAvisoEG']() + lenguajeGB['smsDemott3'](), fkon
 handler.command = /^(demote|quitarpoder|quitaradmin)$/i
 handler.group = true
 handler.admin = true
-handler.botAdmin = true
 export default handler

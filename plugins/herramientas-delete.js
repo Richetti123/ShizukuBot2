@@ -42,8 +42,7 @@ handler.help = ['delete *@user* | +number'];
 handler.tags = ['group'];
 handler.command = /^del(ete)?$/i;
 handler.group = true; 
-handler.admin = true; 
-handler.botAdmin = true; 
+handler.admin = true;  
 handler.register = true;
 
 export default handler;

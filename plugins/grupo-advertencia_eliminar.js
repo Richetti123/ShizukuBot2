@@ -27,5 +27,4 @@ handler.tags = ['owner']
 handler.command = /^(del|delete|eliminar|\-)advertir|quitar|warn(ing)?$/i
 handler.group = true
 handler.admin = true
-handler.botAdmin = true
 export default handler

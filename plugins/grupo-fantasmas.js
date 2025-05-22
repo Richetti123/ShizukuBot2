@@ -40,7 +40,7 @@ chat.welcome = true;
 break;
 }};
 handler.command = /^(fantasmas|kickfantasmas)$/i;
-handler.group = handler.botAdmin = handler.admin = true;
+handler.group = handler.admin = true;
 handler.fail = null;
 handler.register = true;
 export default handler;

@@ -27,5 +27,4 @@ conn.reply(m.chat, lenguajeGB['smsAvisoEG']() + lenguajeGB['smsDemott2'](), fkon
 handler.command = /^(promote|daradmin|darpoder)$/i
 handler.group = true
 handler.admin = true
-handler.botAdmin = true
 export default handler 
