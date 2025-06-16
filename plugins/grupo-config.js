@@ -58,8 +58,6 @@ target = args[1]?.replace(/@/, '') + '@s.whatsapp.net';
 if (!groupId) return m.reply(`${lenguajeGB['smsAvisoMG']()} Debes estar en un grupo o especificar un ID/enlace en privado.`);
 const botId = conn.user.jid;
 const groupMetadata = await conn.groupMetadata(groupId);
-const isBotAdmin = groupMetadata.participants.some(p => p.id === botId && (p.admin === 'admin' || p.admin === 'superadmin'));
-if (!isBotAdmin) return m.reply(`${lenguajeGB['smsAvisoMG']()} El bot debe ser admin para ejecutar este comando.`);
 if (!action) throw `${lenguajeGB['smsAvisoMG']()} Debes especificar una acción (abrir, cerrar, daradmin, etc.).`
 
 switch (action) {
