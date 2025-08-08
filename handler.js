@@ -1009,7 +1009,7 @@ if (!('antitoxic' in chat)) chat.antitoxic = false
 if (!('game' in chat)) chat.game = true
 if (!('game2' in chat)) chat.game2 = true
 if (!('simi' in chat)) chat.simi = false
-if (!('antiTraba' in chat)) chat.antiTraba = true
+if (!('antiTraba' in chat)) chat.antiTraba = false
 if (!('primaryBot' in chat)) chat.primaryBot = null
 if (!('autolevelup' in chat))  chat.autolevelup = false
 if (!isNumber(chat.expired)) chat.expired = 0
@@ -1057,7 +1057,7 @@ antitoxic: false,
 game: true, 
 game2: true, 
 simi: false,
-antiTraba: true,
+antiTraba: false,
 primaryBot: null,
 autolevelup: false,
 expired: 0,
@@ -1088,8 +1088,8 @@ autoread2: false,
 restrict: false,
 temporal: false,
 antiPrivate: false,
-antiCall: true,
-antiSpam: true,
+antiCall: false,
+antiSpam: false,
 modoia: false, 
 anticommand: false, 
 prefix: opts['prefix'] || '*/i!#$%+£¢€¥^°=¶∆×÷π√✓©®&.\\-.@Aa',
@@ -1150,7 +1150,7 @@ let usedPrefix
 let _user = global.db.data && global.db.data.users && global.db.data.users[m.sender]
 
 const groupMetadata = (m.isGroup ? ((conn.chats[m.chat] || {}).metadata || await this.groupMetadata(m.chat).catch(_ => null)) : {}) || {}
-const participants = (m.isGroup ? groupMetadata.participants : []) || []
+const participants = (m.isGroup ? groupMetadata.participants.map(v => ({ ...v, id: v.jid })) : []) || []
 let numBot = (conn.user.lid || '').replace(/:.*/, '') || false
 const detectwhat2 = m.sender.includes('@lid') ? `${numBot}@lid` : conn.user.jid
 
